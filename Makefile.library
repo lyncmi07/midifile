@@ -63,14 +63,14 @@ INCDIR    = include
 LIBDIR    = lib
 LIBFILE   = libmidifile.a
 DYLIBFILE = libmidifile.dylib
-COMPILER  = LANG=C $(ENV) g++ $(ARCH)
+COMPILER  = LANG=C $(ENV) g++-10 $(ARCH)
 AR        = ar
 RANLIB    = ranlib
 DEFINES   =
 PREFLAGS  = -c -g -Wall -O3 $(DEFINES) -I$(INCDIR)
 
-# Using C++ 2011 standard:
-PREFLAGS += -std=c++11
+# Using C++ 2020 standard:
+PREFLAGS += -std=c++20
 
 # MinGW compiling setup (used to compile for Microsoft Windows but actual
 # compiling is usually done in Linux). You have to install MinGW and these
